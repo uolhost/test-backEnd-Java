@@ -53,18 +53,21 @@ https://raw.githubusercontent.com/uolhost/test-backEnd-Java/master/referencias/v
 
 Não há certo ou errado. Queremos apenas saber mais sobre seus conhecimentos na linguagem Java, como uso de bibliotecas públicas, e também seu cuidado com o código fonte, levando em consideração clareza de ideias, organização de código, documentação e testes.
 
-**Faça um fork e um clone deste projeto, crie um branch (com seu nome) e siga os seguintes passos:**
+**Faça um clone deste projeto, crie um novo projeto no seu próprio GitHub e siga os seguintes passos:**
 
 1. Faça um clone do projeto https://github.com/uolhost/test-backEnd-Java.git
-2. Desenvolva um sistema que atenda os casos de uso apresentados
-3. Para montar seu sistema, leve em consideração a arquitetura de referência dentro da pasta referência
-4. Criar uma interface em HTML que contenha um formulário para receber nome, e-mail e telefone
-5. Criar uma interface em HTML que liste os jogadores cadastrados por nome, e-mail, telefone, codinome e lista de referência
-6. Criar uma ou mais classes que faça(m) uma requisição HTTP para o arquivo referência “Liga da Justiça” em: https://raw.githubusercontent.com/uolhost/test-backEnd-Java/master/referencias/liga_da_justica.xml
-7. Criar uma ou mais classes que faça(m) uma requisição HTTP para o arquivo referência “Os Vingadores” em: https://raw.githubusercontent.com/uolhost/test-backEnd-Java/master/referencias/vingadores.json
-8. Criar uma ou mais classes que contenha(m) as regras para persistir e recuperar cadastros de jogadores
-9. Documente como o projeto deve ser iniciado para que possamos rodar sua aplicação
-10. Envie-nos o link do GitHub do seu projeto para podermos realizar o download e verificar a sua proposta!
+2. Crie um novo projeto dentro do seu GitHub (https://github.com)
+3. Desenvolva um sistema que atenda os casos de uso apresentados
+4. Para montar seu sistema, leve em consideração a arquitetura de referência dentro da pasta referência
+5. Criar uma interface em HTML que contenha um formulário para receber nome, e-mail e telefone
+6. Criar uma interface em HTML que liste os jogadores cadastrados por nome, e-mail, telefone, codinome e lista de referência
+7. Criar uma ou mais classes que faça(m) uma requisição HTTP para o arquivo referência “Liga da Justiça” em: https://raw.githubusercontent.com/uolhost/test-backEnd-Java/master/referencias/liga_da_justica.xml
+8. Criar uma ou mais classes que faça(m) uma requisição HTTP para o arquivo referência “Os Vingadores” em: https://raw.githubusercontent.com/uolhost/test-backEnd-Java/master/referencias/vingadores.json
+9. Criar uma ou mais classes que contenha(m) as regras para persistir e recuperar cadastros de jogadores
+10. Documente como o projeto deve ser iniciado para que possamos rodar sua aplicação
+11. Suba a sua proposta para o projeto que você criou no GitHub. Exemplo: https://github.com/seuNome
+12. Envie-nos o link do GitHub do seu projeto para podermos realizar o download. Exemplo: https://github.com/seuNome/test-backEnd-Java.git
+13. Aguarde o RH entrar em contato.
 
 ## Regras
 1. Você poderá utilizar o Java em qualquer versão :)
