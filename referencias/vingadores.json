@@ -1,0 +1,24 @@
+{
+	"vingadores": [{
+			"codinome": "Hulk"
+		},
+		{
+			"codinome": "Capitão América"
+		},
+		{
+			"codinome": "Pantera Negra"
+		},
+		{
+			"codinome": "Homem de Ferro"
+		},
+		{
+			"codinome": "Thor"
+		},
+		{
+			"codinome": "Feiticeira Escarlate"
+		},
+		{
+			"codinome": "Visão"
+		}
+	]
+}
