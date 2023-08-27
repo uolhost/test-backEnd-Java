@@ -42,51 +42,11 @@ public class User implements Serializable {
     @Column(name = "hero_group")
     private HeroGroup heroGroup;
 
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public User(String name, String email, String phone, String codeName, HeroGroup heroGroup) {
         this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getCodeName() {
-        return codeName;
-    }
-
-    public void setCodeName(String codeName) {
         this.codeName = codeName;
-    }
-
-    public HeroGroup getHeroGroup() {
-        return heroGroup;
-    }
-
-    public void setHeroGroup(HeroGroup heroGroup) {
         this.heroGroup = heroGroup;
     }
 

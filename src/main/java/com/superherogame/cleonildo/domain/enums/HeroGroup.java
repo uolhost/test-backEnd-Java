@@ -1,17 +1,12 @@
 package com.superherogame.cleonildo.domain.enums;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+@AllArgsConstructor
+@Getter
 public enum HeroGroup {
-    AVENGER("Vingadores"),
-    JUSTIC_LEAGUE("Liga da Justiça");
+    AVENGER("Vingadores"), JUSTICE_LEAGUE("Liga da Justiça");
+
     private final String groupName;
-
-    public String getGroupName() {
-        return groupName;
-    }
-
-    HeroGroup(String groupName) {
-        this.groupName = groupName;
-    }
 }
