@@ -1,7 +1,11 @@
 package com.superherogame.cleonildo.domain.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.superherogame.cleonildo.api.dto.request.UserRequest;
+import com.superherogame.cleonildo.api.dto.response.Avenger;
+import com.superherogame.cleonildo.api.dto.response.AvengerResponse;
 import com.superherogame.cleonildo.api.dto.response.UserResponse;
+import com.superherogame.cleonildo.domain.client.AvengerClient;
 import com.superherogame.cleonildo.domain.entities.User;
 import com.superherogame.cleonildo.domain.enums.HeroGroup;
 import com.superherogame.cleonildo.domain.repositories.UserRepository;
@@ -12,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -21,9 +26,11 @@ import static com.superherogame.cleonildo.exceptions.ErrorMessagemConstant.USER_
 public class UserService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
     private final UserRepository repository;
+    private final AvengerJsonService service;
 
-    public UserService(UserRepository repository) {
+    public UserService(UserRepository repository, AvengerJsonService service) {
         this.repository = repository;
+        this.service = service;
         this.insertUser();
     }
 
@@ -45,11 +52,19 @@ public class UserService {
     }
 
     public UserResponse addUser(UserRequest request) {
-        User response = new User(request.name(), request.email(), request.phone(), request.codeName(), request.group());
+        try {
+            List<AvengerResponse> listCodeName = service.getAvengersCodeNames();
 
-        repository.save(response);
-        LOGGER.info("Usuários salvo com sucesso.");
-        return new UserResponse(response);
+            listCodeName.contains(request.codeName());
+
+            User response = new User(request.name(), request.email(), request.phone(), request.codeName(), request.group());
+
+            repository.save(response);
+            LOGGER.info("Usuários salvo com sucesso.");
+            return new UserResponse(response);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void updateUser(UUID id, UserRequest request) {
@@ -84,7 +99,7 @@ public class UserService {
 
     private void insertUser() {
         User user = new User();
-        user.setName("John Doe");
+        user.setName("Hulk");
         user.setEmail("john@example.com");
         user.setPhone("123-456-7890");
         user.setCodeName("johnd");
